@@ -1,0 +1,23 @@
+.vertical-center {
+  height: 80%;  /* Fallback for browsers do NOT support vh unit */
+  height: 80vh; /* These two lines are counted as one :-)       */
+
+  max-height: 80%;  /* Fallback for browsers do NOT support vh unit */
+  max-height: 80vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+.mx-custom {
+  margin-left: ($spacer * 5) !important;
+  margin-right: ($spacer * 5) !important;
+}
+
+.btn-signup {
+	background-color: #ac99d6;
+}
+
+.btn-signup:hover {
+	background-color: #8e72ca;
+}
