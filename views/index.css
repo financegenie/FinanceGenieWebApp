@@ -2,8 +2,17 @@
 	background-color: #6ca8e1;
 }
 
+.btn-login:hover {
+	background-color: #3e8fda;
+
+}
+
 .btn-signup {
 	background-color: #ac99d6;
+}
+
+.btn-signup:hover {
+	background-color: #8e72ca;
 }
 
 .vertical-center {
