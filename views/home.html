@@ -9,8 +9,6 @@
     <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-database.js"></script>
 
-    <!-- Angular -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -29,6 +27,10 @@
     <script type="text/javascript">
       initHome();
     </script>
+
+    <!-- Esri -->
+    <link rel="stylesheet" href="https://js.arcgis.com/4.11/esri/css/main.css">
+    <script src="https://js.arcgis.com/4.11/"></script>
   </head>
 
   <body>
@@ -42,8 +44,7 @@
       </ul>
     </nav>
 
-    <div class="container-fluid">
-      <iframe src="map.html"></iframe> 
+    <div class="container-fluid"> 
       <div class="row">
         <nav class="col-md-2 d-none d-md-block bg-light sidebar">
           <div class="sidebar-sticky">
@@ -64,6 +65,8 @@
           </div>
         </nav>
       </div>
+        <div id="viewDiv" style="height: 1080px;"></div>
     </div>
+
   </body>
 </html> 
