@@ -2,8 +2,22 @@
 <html>
 <head>
   <title>Finance Genie</title>
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-database.js"></script>
+
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="index.css">
+
+  <!-- Custom script source -->
+	<script src="../javascript/firebase_operation.js"></script>
+	<script src="../javascript/index.js"></script>
+
+	<!-- Load data-->
+	<script type="text/javascript">
+		initIndex();
+	</script>
 </head>
 
 <body style="background-color: powderblue;">
@@ -24,13 +38,13 @@
 	<div class="col-4">
 	  <form>
 	    <h4 class="display-5 pb-3">Login</h4>
-	    <input type="email" class="form-control" id="username" placeholder="E-mail"><br>
+	    <input type="email" class="form-control" id="email" placeholder="E-mail"><br>
 	    <input type="password" class="form-control" id="password" placeholder="Password"><br>
 	  </form>
 	  <!-- login and sign-up buttons -->
 	  <div class="d-flex justify-content-center align-items-center">
-	    <button type="button" class="btn btn-login mr-2" style="width: 60%;">Login</button>
-	    <button type="button" class="btn btn-signup ml-2" style="width: 60%;">Sign-Up</button>
+	    <button type="button" class="btn btn-login mr-2" style="width: 60%;"  onclick="signInOperation()">Login</button>
+	    <button type="button" class="btn btn-signup ml-2" style="width: 60%;" onclick="location.href='signup.html'">Sign-Up</button>
 	  </div>
 	</div>
       </div>
