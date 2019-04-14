@@ -16,6 +16,10 @@ import { AdminContentComponent } from './admin/admin-content/admin-content.compo
 import { AdminFooterComponent } from './admin/admin-footer/admin-footer.component';
 import { AdminControlSidebarComponent } from './admin/admin-control-sidebar/admin-control-sidebar.component';
 import { AdminDashboard1Component } from './admin/admin-dashboard1/admin-dashboard1.component';
+import { AccountsComponent } from './accounts/accounts.component';
+import { MapsComponent } from './maps/maps.component';
+import { AccountsContentComponent } from './accounts/accounts-content/accounts-content.component';
+import { MapsContentComponent } from './maps/maps-content/maps-content.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +29,10 @@ import { AdminDashboard1Component } from './admin/admin-dashboard1/admin-dashboa
     StarterLeftSideComponent,
     StarterContentComponent,
     StarterFooterComponent,
+    AccountsComponent,
+    MapsComponent,
+    AccountsContentComponent,
+    MapsContentComponent,
   ],
   imports: [
     BrowserModule,
