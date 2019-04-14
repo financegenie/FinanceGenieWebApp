@@ -1,31 +1,63 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Sign-Up</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="signup.css">
-  </head>
+<head>
+  <title>Sign-Up</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="signup.css">
+</head>
 
-  <body style="background-color: powderblue;">
-    <div class="jumbotron jumbotron-fluid vertical-center">
-      <div class="container">
-	<h1 class="display-4 text-center">Sign-Up</h1>
-	<hr class="my-4">
+<body style="background-color: powderblue;">
+  <div class="jumbotron jumbotron-fluid vertical-center">
+    <div class="container">
+      <h1 class="display-4 text-center">Sign-Up</h1>
+      <hr class="my-4">
 
-	<form class="mx-auto mb-3" style="width: 55%;">
-	  <p class="lead">Enter Username:</p>
-	  <input type="text" class="form-control" id="username"><br>
-	  <p class="lead">Enter Password:</p>
-	  <input type="text" class="form-control" id="password"><br>
-	  <p class="lead">Confirm Password:</p>
-	  <input type="text" class="form-control" id="confirm_password"><br>
-	</form>
+      <form class="mx-auto mb-3" style="width: 40%;">
+	<label for="username">Enter E-mail:</label>
+	<input type="email" class="form-control" id="username"><br>
+	<label for="password">Enter Password:</label>
+	<input type="password" class="form-control" id="password"><br>
+	<label for="confirm_password">Confirm Password:</label>
+	<input type="password" class="form-control" id="confirm_password"><br>
+	<small id="pass_error" class="form-text text-muted"></small>
+      </form>
 
-	<div class="d-flex justify-content-center align-items-center">
-	  <button type="button" class="btn btn-signup" style="width: 30%;">Sign-Up Now</button>
-	</div>
+      <div class="d-flex justify-content-center align-items-center">
+	<button type="button" class="btn btn-signup" style="width: 40%;" onclick="password_validation()">Sign-Up Now</button>
       </div>
     </div>
-  </body>
+  </div>
+
+  <!-- password validation javascript -->
+  <script>
+    function password_validation() {
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+    var confirm_password = document.getElementById("confirm_password").value;
+    var good_pass = true;
+
+      if (password.valueOf() != confirm_password.valueOf()) {
+	document.getElementById("pass_error").innerHTML = "Inputted passwords must match"
+	good_pass = false;
+      }
+
+      if (password.length < 4 || confirm_password < 4) {
+	document.getElementById("pass_error").innerHTML = "Password must be 4 characters or greater";
+	good_pass = false;
+      }
+
+      if (username.length == 0) {
+	document.getElementById("pass_error").innerHTML = "Username was not entered";
+	good_pass = false;
+      }
+
+      if (good_pass) {
+	window.location.href = "index.html";
+      }
+    }
+  </script>
+
+  <noscript>Your browser does not support JavaScript</noscript>
+</body>
 
 </html>
